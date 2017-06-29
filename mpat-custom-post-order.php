@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name: MPAT Custom Posts Order
- * Plugin URI: https://github.com/MPAT-eu/cpo
+ * Plugin URI: https://github.com/jeanphilipperuijs/cpo
  * Description: Settingless version of <a href="http://hijiriworld.com/web/plugins/mpat-custom-post-order/">Intuitive Custom Post Order</a>
  * Version: 1.0.0
  * Author: MPAT
- * Author URI: https://github.com/MPAT-eu
+ * Author URI: https://github.com/jeanphilipperuijs
  * Text Domain: mpat-custom-post-order
  * Domain Path: /
  * License: GPLv2 or later
