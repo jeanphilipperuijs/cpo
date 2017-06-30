@@ -1,16 +1,18 @@
 {
-    "name" : "MPAT-eu/cpo",
-    "description" : "Custom Page Order",
+    "name" : "custom-post-order",
+    "description" : "MPAT custom port order",
     "version" : "1.0.0",
-    "license" : "MIT",
+    "license" : "GPL2",
     "authors" : [{
-            "name" : "Jean-Philippe Ruijs",
-            "email" : "jean-philippe.ruijs@imt.fr"
+        "name" : "Jean-Philippe Ruijs",
+        "email" : "jean-philippe.ruijs@imt.fr"
+    }
+    ],
+    "repositories" : [
+        {
+            "type" : "vcs",
+            "url" : "git@github.com:jeanphilipperuijs/cpo.git"
         }
     ],
-    "type" : "wordpress-plugin",
-    "require": {
-        "php": ">=5.5",
-        "composer/installers": "~1.0.12"
-    }
+    "type" : "wordpress-plugin"
 }
