@@ -2,15 +2,14 @@
 /*
  * Plugin Name: MPAT Custom Posts Order
  * Plugin URI: https://github.com/jeanphilipperuijs/cpo
- * Description: Settingless version of <a href="http://hijiriworld.com/web/plugins/mpat-custom-post-order/">Intuitive Custom Post Order</a>
- * Version: 1.0.0
- * Author: MPAT
- * Author URI: https://github.com/jeanphilipperuijs
+ * Description: Settingless Custom Post Order
+ * Version: 2017-07-03
+ * Author: Jean-Philippe Ruijs
+ * Author URI: https://github.com/jeanphilipperuijs/
  * Text Domain: mpat-custom-post-order
- * Domain Path: /
  * License: GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ */
 
 /**
 * Define
@@ -19,11 +18,12 @@
 define( 'MPO_URL', plugins_url( '', __FILE__ ) );
 define( 'MPO_DIR', plugin_dir_path( __FILE__ ) );
 
-/**
+/**"orderby"
 * Uninstall hook
 */
 
 register_uninstall_hook( __FILE__, 'mpo_uninstall' );
+
 function mpo_uninstall()
 {
     global $wpdb;
@@ -39,6 +39,7 @@ function mpo_uninstall()
         mpo_uninstall_db();
     }
 }
+
 function mpo_uninstall_db()
 {
     global $wpdb;
@@ -84,17 +85,17 @@ class Mpo
     function _check_load_script_css()
     {
         $active = true;
-        
         // exclude (sorting, addnew page, edit page)
         if (isset( $_GET['orderby'] ) || strstr( $_SERVER['REQUEST_URI'], 'action=edit' ) || strstr( $_SERVER['REQUEST_URI'], 'wp-admin/post-new.php' )) {
             return false;
         } else {
-            if (isset( $_GET['post_type'] ) && !isset( $_GET['taxonomy'] )) { // if page or custom post types
+            if (isset( $_GET['post_type'] ) && !isset( $_GET['taxonomy'] )) {
+                // if page or custom post types
             }
-            if (!isset( $_GET['post_type'] ) && strstr( $_SERVER['REQUEST_URI'], 'wp-admin/edit.php' )) { // if post
+            if (!isset( $_GET['post_type'] ) && strstr( $_SERVER['REQUEST_URI'], 'wp-admin/edit.php' )) {
+                // if post
             }
         }
-        
         return $active;
     }
 
